@@ -22,3 +22,20 @@ const appearOnScroll = new IntersectionObserver(
 faders.forEach(fader => {
     appearOnScroll.observe(fader);
 })
+
+
+
+// var initialSrc = "/images/sprint_stand.png";
+// var scrollSrc = "/images/sprint_walk.png";
+
+// $(window).scroll(function() {
+//    var value = $(this).scrollTop();
+//    if (value > 100)
+//       $(".walk").attr("src", scrollSrc);
+//    else
+//       $(".walk").attr("src", initialSrc);
+// });
+
+
+
+

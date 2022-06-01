@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horizontal Scrolling</title>
+    <title>Omar's Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="outer-wrapper">
         <div class="wrapper">
+            <div class="infinite">
+                <div class="runner" id="runner"></div>
+            </div>
             <div class="slide zero">
                     <div class="maintext">
                         <h1>
-                            For the best experience, please view this webpage on a computer.
+                            For the best experience, please view this webpage fullscreen on a computer.
                         </h1>
                     </div>
                 <div class="subtext">
@@ -21,27 +24,41 @@
                         Scroll down!
                     </h2>
                 </div>
+                <!-- <div class="infinite">
+                    <div class="runner" id="runner"></div>
+                </div> -->
             </div>
+
+
+
             <div class="slide one">
-                <div class="fade-in">
+                <div class="maintext fade-in">
                     <h1>
                         Hi, I'm Omar! <br>
                         Tech Enthusiast and <br>
                         aspiring Front-End Developer.
                     </h1>
-                    <h2>
+                </div>
+                <div class="subtext fade-in">
+                    <p>
                         I'm a first-year student at  Nanyang Technological University (NTU), Singapore, studying <br>
                         Chemical and Biomolecular Engineering. I hope to make a change in my programme <br>
                         to Computer Engineering because my interests are more aligned with said 
                         programme.
-                    </h2>
+                    </p>
                 </div>
             </div>
+
+
+
             <div class="slide two">
-                <div class="fade-in">
-                    <h1>
-                        ABOUT ME
-                    </h1>
+                <div class="title fade-in">
+                    <p>A B O U T 
+                        <br>
+                        <br>
+                         M E</p>
+                </div>
+                <div class="text fade-in">
                     <h2>
                         I have always loved tinkering with electronics and experimenting with software.
                         As a kid and up to my teenage years, I played computer games in my free time. I researched and studied the vast variety of computer parts and learnt the best specifications
@@ -55,10 +72,10 @@
                         choice of study, since it involves me incorporating my passion, computers, into my career.
                     </h2>
                 </div>
-                <div class="dialogue" aria-hidden="true">
-                    <p>Who am I?</p>
-                </div>
             </div>
+
+
+
             <div class="slide three">
                 <div class="fade-in">
                     <h2>
@@ -69,6 +86,9 @@
                     </h2>
                 </div>
             </div>
+
+
+
             <div class="slide four">
                 <div class="fade-in">
                     <h1>
@@ -87,6 +107,9 @@
                     </h2>
                 </div>
             </div>
+
+
+
             <div class="slide five">
                 <h1>
                     SKILLS
@@ -103,6 +126,9 @@
                     &#x2022; MATLAB
                 </p>
             </div>
+
+
+
             <div class="slide six">
                 <h1>
                     PROJECTS
@@ -122,9 +148,9 @@
             </div>
         </div>
     </div>
-    <div class="infinite">
-        <div class="runner"></div>
-    </div>
+    <!-- <div class="infinite">
+        <div class="runner" id="runner"></div>
+    </div> -->
     <script src="observer.js"></script>
 </body>
 </html>

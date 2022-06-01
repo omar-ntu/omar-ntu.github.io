@@ -47,41 +47,35 @@
 }
 
 
-.maintext{
+.zero .maintext{
     border: 10px solid gray;
     background-color: white;
-    max-width: 960px;
+    max-width: 1200px;
+    width: fit-content;
     margin: auto;
     height: 10vh;
-    width: 100%;
     align-items: center;
     justify-content: center;
     display: flex;
+    margin-top: 20vh;
 }
 
 @media screen and (max-width: 960px){
-    .maintext{
+    .zero .maintext{
         width: 80%;
         height: auto;
         text-align: center;
     }
 }
 
-.subtext{
+.zero .subtext{
     font-size: 24px;
     text-align: center;
     justify-content: right;
     display: flex;
-    margin-top: 0%;
+    margin-top: 10%;
     padding-right: 10%;
 }
-
-/* .one{
-    background-image: url(/images/wallpaper.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}*/
 
 .outer-wrapper{
     width: 100vh;
@@ -99,17 +93,27 @@
     display: none;
 }
 
-.runner{
+
+
+/* RUNNER ANIMATION ---------------------------------------------------------------------------------------------------------------- */
+
+.infinite{
+    width: 0;
     position: relative;
+    top: 70vh;
+}
+
+.runner{
     height: 286px;
     justify-content: center;
     background-color: transparent;
-    width: calc(1920px / 8);
+    width: 240px;
     background: url(/images/runner.png);
-    animation: animateRunner 1s steps(8) infinite;
-    bottom: -70vh;
-    left: 50vh;
+    animation: animateRunner 1s steps(8) infinite,
+                forward 40s linear infinite;
+
 }
+
 
 @keyframes animateRunner {
     0%
@@ -122,46 +126,74 @@
     }
 }
 
-.one h1{
-    border: 5px solid gray;
+@keyframes forward {
+    0%
+    {
+        transform: translateX(-10vw);
+    }
+    100%
+    {
+        transform: translateX(800vw);
+    }
+}
+
+
+
+/*  HI IM OMAR SLIDE -------------------------------------------------------------------------------------------------------------------- */
+
+.one .maintext{
     align-items: center;
     text-align: left;
     width: fit-content;
-    background-color: white;
+    float: left;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2rem;
+    margin-top: 5%;
 }
-.one h2{
-    border: 5px solid gray;
+.one .subtext{
+    border: 5px solid rgb(0, 146, 24);
     width: fit-content;
     margin-top: 10vh;
-    margin-left: 10vw;
     background-color: white;
+    float: left;
+    margin-right: 30%;
+    margin-left: 10%;
+    font-size: 1.5rem;
+    text-align: justify;
 }
 
 
-.two{
-    position: absolute;
-    left: 200vw;
-    background-attachment: fixed;
-    -webkit-mask-image: -webkit-linear-gradient(top, #fff 0%, #131313 100%);
-    mask-image: -webkit-linear-gradient(top, #fff 0%, #131313 100%);
-    background-position: center;
-    background-attachment: fixed;
-    background-size: 100vw auto;
-}
-.two h1{
-    border: 5px solid gray;
+/* ABOUT ME SLIDE ---------------------------------------------------------------------------------------------------------------------------- */
+
+.two .title {
+    /* border: 5px solid gray;
+    background-color: white; */
+    border: 5px dotted yellow;
+    background-color: blue;
     align-items: center;
-    text-align: left;
-    width: fit-content;
-    background-color: white;
+    text-align: center;
+    width: 70px;
+    color: yellow;
+    position: relative;
+    float: left;
+
+    font-size: 64px;
+    font-weight: 900;
+    text-shadow: 0px 5px 5px orange,
+    0px 1px 1px orange,
+    0px 2px 2px orange,
+    0px 3px 3px orange,
+    0px 4px 4px orange
+    ;
 }
-.two h2{
+.two .text{
     border: 5px solid gray;
     width: 60%;
-    margin-top: 10vh;
     background-color: white;
+    float: left;
+    margin: 10vh 10vw;
 }
-.two .dialogue{
+/* .two .dialogue{
     border: 5px solid gray;
     width: fit-content;
     height: fit-content;
@@ -174,24 +206,26 @@
             transform: translateX(-50%);
     -webkit-background-clip: text;
     background-clip: text;
-}
+} */
+/* .two{
+    position: absolute;
+    left: 200vw;
+    background-attachment: fixed;
+    -webkit-mask-image: -webkit-linear-gradient(top, #fff 0%, #131313 100%);
+    mask-image: -webkit-linear-gradient(top, #fff 0%, #131313 100%);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 100vw auto;
+} */
 
 
 
-.three h1{
-    border: 5px solid gray;
-    align-items: center;
-    text-align: left;
-    width: fit-content;
-    background-color: white;
-}
 .three h2{
     border: 5px solid gray;
     width: 60%;
-    margin-top: 10vh;
+    margin-top: 20vh;
     background-color: white;
 }
-
 
 
 .four h1{
