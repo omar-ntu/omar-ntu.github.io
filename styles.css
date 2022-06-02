@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* body{
@@ -13,6 +14,8 @@
     min-height: 100vh;
 } */
 
+
+/* ANIMATIONS ----------------------------------------------------------------------------------------------------------- */
 .fade-in{
     opacity: 0;
     transition: opacity 0.5s ease-in;
@@ -21,6 +24,62 @@
 .fade-in.appear{
     opacity: 1;
 }
+
+
+@keyframes slide-down {
+    0% {
+        transform: scale(0.025, 0);
+    }
+    50% {
+        transform: scale(0.025, 1);
+    }
+}
+
+
+.two .title {
+    border: 5px dotted yellow;
+    background-color: blue;
+    align-items: center;
+    text-align: center;
+    width: 70px;
+    color: yellow;
+    float: left;
+
+    font-size: 64px;
+    font-weight: 900;
+    text-shadow: 0px 5px 5px orange,
+    0px 1px 1px orange,
+    0px 2px 2px orange,
+    0px 3px 3px orange,
+    0px 4px 4px orange
+    ;
+}
+
+.slidedown {
+    animation-name: slide-down;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+
+
+
+/* .reveal{
+    position: relative;
+    transform: translateY(0px);
+    transition: 2s all ease;
+    opacity: 1;
+}
+
+.reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+} */
+
+
+
+
+
 
 .slide{
     width: 100vw;
@@ -34,7 +93,7 @@
 .wrapper{
     display: flex;
     flex-direction: row;
-    width: 800vw;
+    width: 730vw;
     transform: rotate(90deg) translateY(-100vh);
     transform-origin: top left;
 }
@@ -110,7 +169,7 @@
     width: 240px;
     background: url(/images/runner.png);
     animation: animateRunner 1s steps(8) infinite,
-                forward 40s linear infinite;
+                forward 35s linear infinite;
 
 }
 
@@ -133,7 +192,7 @@
     }
     100%
     {
-        transform: translateX(800vw);
+        transform: translateX(690vw);
     }
 }
 
@@ -165,17 +224,43 @@
 
 /* ABOUT ME SLIDE ---------------------------------------------------------------------------------------------------------------------------- */
 
-.two .title {
-    /* border: 5px solid gray;
-    background-color: white; */
+
+.two .text{
+    border: 5px solid rgb(0, 146, 24);
+    width: 60%;
+    background-color: white;
+    float: left;
+    margin: 10vh 10vw;
+    font-size: 1.5rem;
+}
+
+
+.three{
+    display: flex;
+}
+
+.three .fade-in{
+    border: 5px solid rgb(0, 146, 24);
+    width: 60%;
+    margin-top: 20vh;
+    background-color: white;
+    float: left;
+    height: fit-content;
+    font-size: 1.5rem;
+}
+
+/* EXPERIENCE ------------------------------------------------------------------------------------------------------------------------------------ */
+.three .experience{
+    width: 70px;
+    float: right;
+    margin-left: 20%;
     border: 5px dotted yellow;
     background-color: blue;
     align-items: center;
     text-align: center;
-    width: 70px;
     color: yellow;
-    position: relative;
-    float: left;
+    height: fit-content;
+
 
     font-size: 64px;
     font-weight: 900;
@@ -186,59 +271,106 @@
     0px 4px 4px orange
     ;
 }
-.two .text{
-    border: 5px solid gray;
-    width: 60%;
-    background-color: white;
-    float: left;
-    margin: 10vh 10vw;
-}
-/* .two .dialogue{
-    border: 5px solid gray;
-    width: fit-content;
-    height: fit-content;
-    position: fixed;
-    display: block;
-    margin: auto;
-    top: 65%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
-    -webkit-background-clip: text;
-    background-clip: text;
-} */
-/* .two{
-    position: absolute;
-    left: 200vw;
-    background-attachment: fixed;
-    -webkit-mask-image: -webkit-linear-gradient(top, #fff 0%, #131313 100%);
-    mask-image: -webkit-linear-gradient(top, #fff 0%, #131313 100%);
-    background-position: center;
-    background-attachment: fixed;
-    background-size: 100vw auto;
-} */
 
-
-
-.three h2{
-    border: 5px solid gray;
-    width: 60%;
-    margin-top: 20vh;
-    background-color: white;
-}
-
-
-.four h1{
-    border: 5px solid gray;
-    align-items: center;
-    text-align: left;
-    width: fit-content;
-    background-color: white;
-}
-
-.four h2{
-    border: 5px solid gray;
+.four p{
+    border: 5px solid rgb(0, 146, 24);
+    font-size: 1.5rem;
     width: fit-content;
     margin-top: 10vh;
     background-color: white;
+}
+
+
+
+/* SKILLS --------------------------------------------------------------------------------------------------------------------------------------- */
+.five h1{
+    width: 70px;
+    float: left;
+    border: 5px dotted yellow;
+    background-color: blue;
+    align-items: center;
+    text-align: center;
+    color: yellow;
+
+
+    font-size: 64px;
+    font-weight: 900;
+    text-shadow: 0px 5px 5px orange,
+    0px 1px 1px orange,
+    0px 2px 2px orange,
+    0px 3px 3px orange,
+    0px 4px 4px orange
+    ;
+}
+
+.avid-learner p{
+    font-size: 2rem;
+    width: 60vw;
+    margin-top: 10vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.languages {
+    border: 5px solid rgb(0, 146, 24);
+    font-size: 1.5rem;
+    width: fit-content;
+    margin-top: 10vh;
+    background-color: white;
+}
+
+
+/* PROJECTS ----------------------------------------------------------------------------------------------------------------------------------------- */
+.six h1{
+    width: 70px;
+    float: left;
+    border: 5px dotted yellow;
+    background-color: blue;
+    align-items: center;
+    text-align: center;
+    color: yellow;
+
+
+    font-size: 64px;
+    font-weight: 900;
+    text-shadow: 0px 5px 5px orange,
+    0px 1px 1px orange,
+    0px 2px 2px orange,
+    0px 3px 3px orange,
+    0px 4px 4px orange
+    ;
+}
+
+.six .insight{
+    font-size: 2rem;
+    width: 60vw;
+    margin-top: 10vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.six .websites{
+    border: 5px solid rgb(0, 146, 24);
+    font-size: 1.5rem;
+    width: fit-content;
+    margin-top: 10vh;
+    background-color: white;
+}
+
+/* CONTACT ME -------------------------------------------------------------------------------------------------------------------------------- */
+.seven{
+    margin: 0;
+    padding: 0;
+    width: 30vw;
+    background-image: none;
+    background-color: #131313;
+    color: white;
+}
+
+.contactme{
+    margin: 40px 40px;
+    font-size: 1.5rem;
+}
+
+.contact__links{
+    margin-left: 40px;
+    font-size: 1.2rem;
 }
