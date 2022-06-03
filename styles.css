@@ -26,14 +26,31 @@
 }
 
 
-@keyframes slide-down {
+.reveal{
+    position: relative;
+    top: 0px;
+    opacity: 1;
+    transition: 3s all ease-out;
+}
+
+.reveal.active {
+    top: 0px;
+    transform: translateY(0);
+    opacity: 1;
+
+}
+
+
+
+
+/* @keyframes slide-down {
     0% {
         transform: scale(0.025, 0);
     }
     50% {
         transform: scale(0.025, 1);
     }
-}
+} */
 
 
 .two .title {
@@ -239,10 +256,31 @@
     display: flex;
 }
 
-.three .fade-in{
+/* .three .fade-in{
     border: 5px solid rgb(0, 146, 24);
     width: 60%;
     margin-top: 20vh;
+    background-color: white;
+    float: left;
+    height: fit-content;
+    font-size: 1.5rem;
+} */
+
+.three .national-service{
+    border: 5px solid rgb(0, 146, 24);
+    width: 60%;
+    margin-top: 20vh;
+    background-color: white;
+    float: left;
+    height: fit-content;
+    font-size: 1.5rem;
+}
+
+.three .end{
+    border: 5px solid rgb(0, 146, 24);
+    width: 60%;
+    margin-top: 100px;
+    margin-left: 200px;
     background-color: white;
     float: left;
     height: fit-content;
@@ -275,8 +313,9 @@
 .four p{
     border: 5px solid rgb(0, 146, 24);
     font-size: 1.5rem;
-    width: fit-content;
+    width: 60%;
     margin-top: 10vh;
+    margin-left: 100px;
     background-color: white;
 }
 
@@ -303,10 +342,17 @@
     ;
 }
 
+.five{
+    display: flex;
+}
+
 .avid-learner p{
+    border: 5px solid gray;
     font-size: 2rem;
     width: 60vw;
     margin-top: 10vh;
+    margin-left: 150px;
+    float: left;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -314,8 +360,10 @@
     border: 5px solid rgb(0, 146, 24);
     font-size: 1.5rem;
     width: fit-content;
-    margin-top: 10vh;
+    margin-top: 100px;
+    margin-left: 150px;
     background-color: white;
+    float: left;
 }
 
 
