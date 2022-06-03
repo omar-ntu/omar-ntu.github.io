@@ -16,7 +16,7 @@ section{
     mask-image: -webkit-linear-gradient(top, #fff 0%, #131313 100%);
     background-color: #565264;
     top: 8vh;
-    background-image: url(/images/container1.png);
+    background-image: url(/website_2/images/container1.png);
     background-image: fit;
     background-size: 100vw auto;
     background-position: center;
@@ -126,7 +126,7 @@ section{
     width: 100%;
     -webkit-mask-image: -webkit-linear-gradient(top, #fff 0%, #131313 100%);
     mask-image: -webkit-linear-gradient(top, #fff 0%, #131313 100%);
-    background-image: url(/images/expbackground.png);
+    background-image: url(/website_2/images/expbackground.png);
     background-size: 100vw auto;
     background-position: center;
     background-attachment: fixed;
@@ -165,7 +165,7 @@ section{
     width: 100%;
     -webkit-mask-image: -webkit-linear-gradient(top, #fff 0%, #131313 100%);
     mask-image: -webkit-linear-gradient(top, #fff 0%, #131313 100%);
-    background-image: url(/images/background.png);
+    background-image: url(/website_2/images/background.png);
     background-size: 100vw auto;
     background-position: center;
     background-attachment: fixed;
