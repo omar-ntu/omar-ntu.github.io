@@ -1,0 +1,26 @@
+.footer__container{
+    background-color: #131313;
+    color: white;
+    height: 40vh;
+}
+
+/* .footer__container h1, h2{
+    margin-left: 10%;
+    text-align: left;
+} */
+
+.footer__items{
+    padding-top: 10vh;
+    margin-left: 10%;
+    font-size: 32px;
+}
+
+.footer__emails{
+    margin-left: 10%;
+    margin-top: 1rem;
+}
+
+.footer__phone{
+    margin-left: 10%;
+    margin-top: 1rem;
+}
