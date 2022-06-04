@@ -409,7 +409,7 @@
   }
   
   .menu > li > a {
-    background: blue;
+    background: linear-gradient(to top, blue 0%, black 100%);
     color: #fff;
     display: block;
     padding: 10px 20px;
@@ -419,7 +419,7 @@
   }
   
   .menu ul {
-    background: #ddd;
+    background: #fff;
     height: 0;
     left: 0;
     opacity: 0;
@@ -440,11 +440,17 @@
   }
   
   .menu ul a {
-    color: #000;
+    background: #130d4f;
+    height: 50px;
+    align-items: center;
+    text-align: left;
+    text-decoration: none;
+    color: #fff;
     display: block;
     padding: 5px 20px;
-    margin: 10px;
+    margin-top: 0px;
   }
+
 
   /* --------------------------------------- */
 
@@ -462,7 +468,7 @@
   }
   
   .python_menu > li > a {
-    background: blue;
+    background: linear-gradient(to top, blue 0%, black 100%);
     color: #fff;
     display: block;
     padding: 10px 20px;
