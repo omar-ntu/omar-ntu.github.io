@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Omar Mustafa</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Main Section -->
+  <header>
+  <div class="main">
+    <div class="main__container">
+        <div class="main__content">
+            <h1>Hello, my name is Omar Mustafa!</h1><br>
+            <p>I am currently a first-year student at Nanyang Technological University (NTU), Singapore, studying Chemical and Biomolecular Engineering.</p>
+            <br>
+            <p>However, I hope to make a change in my programme and pursue a career in the field of Computer Engineering.
+               I sincerely hope I get to transfer programme, because becoming a software developer is my dream!</p>
+            <br>
+            <p>(I crafted this website specifically for my application for a change of programme, using HTML, CSS and JavaScript. This website has been optimised for mobile. Be sure to check it out!)</p>
+        </div>
+          <div class="main__img--container">
+            <img src="/website1/omar1.svg" alt="pic" id="main__img">
+          </div>
+    </div>
+
+
+    <!-- COLLAPSIBLE SECITON ---------------------------------------------------------------- -->
+    <div class="main__collapsible">
+      <button class="collapsible">About Me</button>
+        <div class="content">
+          <br>
+          <p>I have always loved tinkering with electronics and experimenting with software.
+            As a kid and up to my teenage years, I played computer games in my free time. I researched and studied the vast variety of computer parts and learnt the best specifications
+              a computer should have in order to run demanding programmes at optimal settings. I build my very own PCs from scratch,
+              by choosing the right computer parts and assembling them together. After building my first PC, I realised just how much I enjoyed building computers. I moved on to helping my peers build
+              their PCs. I found out that different users look for different things in their PCs; some want high-end GPUs and CPUs for gaming, while others just want something within their budgets. 
+              I learnt to look for the optimal specifications for PCs for users with different demands.
+              I believe in incorporating our interests and passions into our work life, hence I am choosing Computer Engineering as my
+              choice of study, since it involves me incorporating my passion, computers, into my career. (edit this part, add more)</p>
+              <br>
+          <p>Back in National Service, I served as an administrative clerk and had multiple job scopes, one being assisting the Data Analytics branch with their work. This
+             was when I was first introduced to the world of programming, and I observed just how much it simplifies things and how much it is used in workplaces. (add more)
+          </p>
+          <br>
+        </div>
+      
+        <button class="collapsible">Experience</button>
+          <div class="content">
+            <br>
+            <p>Back in my National Service with Singapore Civil Defence Force (SCDF), I partially worked with Data Analysts whose job scope was 
+              monthly cleaning and reporting of Emergency Medical Services (EMS) data, and maintaining and creating scripts for data cleaning. In layman terms, they collated data 
+              from ambulance statistics and made reports.
+             (add more)
+            </p>
+            <br>
+          </div>
+        
+        <button class="collapsible">Skills</button>
+          <div class="content">
+            <br>
+            <p>&#x2022; HTML</p>
+            <p>&#x2022; CSS</p>
+            <p>&#x2022; JavaScript</p>
+            <p>&#x2022; MATLAB</p>
+            <p>&#x2022; I know basic Python, having completed some beginner-level projects.</p>
+            <p>&#x2022; I am currently also teaching myself C++</p>
+            <br>
+          </div>
+        
+        <button class="collapsible">Projects (with code)</button>
+          <div class="content">
+            <br>
+            <p>&#x2022; This Website.</p>
+            <p>(Press F12 to see code)</p>
+            <br>
+          </div>
+        
+        <button class="collapsible">Non-IT Skills</button>
+          <div class="content">
+            <br>
+              <p><b>Positions held:</b></p>
+            <br>
+              <p><b>Languages spoken:</b></p>
+            <br>
+          </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+  </div>
+  </header>
+  
+
+    
+          <!-- Footer Section -->
+          <div class="footer__container" aria-hidden="true">
+            <div class="footer__stuff">
+              <br>
+              <br>
+              <br>
+              <h1>
+                Contact Me:
+              </h1>
+              <br>
+              <h2>
+                Gmail: omarsheikmustafa@gmail.com
+                <br>
+                Outlook: OMAR004@e.ntu.edu.sg
+              </h2>
+              <br>
+              <h2>
+                Phone: +65 8790 7011
+              </h2>
+              <br>
+              <br>
+            </div>
+  </div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+</body>
+</html>
