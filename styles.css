@@ -243,6 +243,7 @@
 
 .two .text{
     border: 5px solid rgb(0, 146, 24);
+    text-align: justify;
     width: 60%;
     background-color: white;
     float: left;
@@ -267,6 +268,7 @@
 
 .three .national-service{
     border: 5px solid rgb(0, 146, 24);
+    text-align: justify;
     width: 60%;
     margin-top: 20vh;
     background-color: white;
@@ -312,6 +314,8 @@
 
 .four p{
     border: 5px solid rgb(0, 146, 24);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: justify;
     font-size: 1.5rem;
     width: 60%;
     margin-top: 10vh;
@@ -457,14 +461,14 @@
   
   .menu ul a {
     background: #130d4f;
-    height: 50px;
+    height: 80px;
     align-items: center;
     text-align: left;
     text-decoration: none;
     color: #fff;
     display: block;
     padding: 5px 20px;
-    margin-top: 0px;
+    margin-top: 0;
   }
 
 
@@ -494,7 +498,8 @@
   }
   
   .python_menu ul {
-    background: #ddd;
+    background: #130d4f;
+    
     height: 0;
     left: 0;
     opacity: 0;
@@ -515,10 +520,11 @@
   }
   
   .python_menu ul a {
-    color: #000;
+    color: #fff;
     display: block;
     padding: 5px 20px;
     margin: 10px;
+    text-decoration: none;
   }
 
 
