@@ -3,441 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Omar Sheik Mustafa | Machine Learning Engineer & Researcher</title>
-  <style>
-    :root {
-      --primary: #4a6fa5;
-      --secondary: #166088;
-      --accent: #4e937a;
-      --light: #f5f5f5;
-      --dark: #333;
-      --shadow: rgba(0, 0, 0, 0.1);
-    }
-    
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    
-    body {
-      background-color: var(--light);
-      color: var(--dark);
-      line-height: 1.6;
-    }
-    
-    a {
-      color: var(--secondary);
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    
-    a:hover {
-      color: var(--accent);
-    }
-    
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    
-    /* Header styles */
-    header {
-      background-color: white;
-      box-shadow: 0 2px 10px var(--shadow);
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 100;
-    }
-    
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 0;
-    }
-    
-    .logo {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--primary);
-    }
-    
-    .nav-links {
-      display: flex;
-      list-style: none;
-    }
-    
-    .nav-links li {
-      margin-left: 30px;
-    }
-    
-    .nav-links a {
-      font-weight: 500;
-    }
-    
-    .hamburger {
-      display: none;
-      cursor: pointer;
-    }
-    
-    /* Hero section */
-    .hero {
-      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-      color: white;
-      padding: 160px 0 100px;
-      text-align: center;
-    }
-    
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-    }
-    
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto 30px;
-    }
-    
-    .btn {
-      display: inline-block;
-      background-color: var(--accent);
-      color: white;
-      padding: 12px 30px;
-      border-radius: 4px;
-      font-weight: 500;
-      transition: background-color 0.3s;
-    }
-    
-    .btn:hover {
-      background-color: #3a7961;
-      color: white;
-    }
-    
-    /* About section */
-    .section {
-      padding: 80px 0;
-    }
-    
-    .section-title {
-      text-align: center;
-      margin-bottom: 60px;
-      font-size: 2rem;
-      color: var(--primary);
-    }
-    
-    .about-content {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-    
-    .about-text {
-      flex: 1;
-      min-width: 300px;
-      padding-right: 40px;
-    }
-    
-    .about-image {
-      flex: 1;
-      min-width: 300px;
-      text-align: center;
-    }
-    
-    .about-image img {
-      max-width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px var(--shadow);
-    }
-    
-    .skills {
-      margin-top: 40px;
-    }
-    
-    .skills h3 {
-      margin-bottom: 20px;
-      color: var(--secondary);
-    }
-    
-    .skill-tags {
-      display: flex;
-      flex-wrap: wrap;
-    }
-    
-    .skill-tag {
-      background-color: white;
-      color: var(--primary);
-      padding: 8px 16px;
-      border-radius: 20px;
-      margin: 0 10px 10px 0;
-      box-shadow: 0 2px 5px var(--shadow);
-    }
-    
-    /* Projects section */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-      gap: 30px;
-    }
-    
-    .project-card {
-      background-color: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 5px 15px var(--shadow);
-      transition: transform 0.3s;
-    }
-    
-    .project-card:hover {
-      transform: translateY(-5px);
-    }
-    
-    .project-image {
-      height: 200px;
-      background-color: #e1e5eb;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--primary);
-      font-size: 3rem;
-    }
-    
-    .project-content {
-      padding: 20px;
-    }
-    
-    .project-title {
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-      color: var(--secondary);
-    }
-    
-    .project-tags {
-      display: flex;
-      flex-wrap: wrap;
-      margin: 15px 0;
-    }
-    
-    .project-tag {
-      background-color: #e9eef5;
-      color: var(--primary);
-      padding: 5px 10px;
-      border-radius: 4px;
-      margin: 0 5px 5px 0;
-      font-size: 0.85rem;
-    }
-    
-    /* Research section */
-    .research-item {
-      background-color: white;
-      padding: 30px;
-      border-radius: 10px;
-      margin-bottom: 30px;
-      box-shadow: 0 5px 15px var(--shadow);
-    }
-    
-    .research-title {
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-      color: var(--secondary);
-    }
-    
-    .research-meta {
-      color: #666;
-      font-style: italic;
-      margin-bottom: 15px;
-    }
-    
-    /* Education section */
-    .timeline {
-      position: relative;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    
-    .timeline::after {
-      content: '';
-      position: absolute;
-      width: 4px;
-      background-color: var(--primary);
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      margin-left: -2px;
-    }
-    
-    .timeline-item {
-      position: relative;
-      width: 50%;
-      padding: 30px;
-    }
-    
-    .timeline-item:nth-child(odd) {
-      left: 0;
-    }
-    
-    .timeline-item:nth-child(even) {
-      left: 50%;
-    }
-    
-    .timeline-content {
-      background-color: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px var(--shadow);
-      position: relative;
-    }
-    
-    .timeline-content::after {
-      content: '';
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background-color: white;
-      border: 4px solid var(--primary);
-      border-radius: 50%;
-      top: 20px;
-      z-index: 1;
-    }
-    
-    .timeline-item:nth-child(odd) .timeline-content::after {
-      right: -14px;
-    }
-    
-    .timeline-item:nth-child(even) .timeline-content::after {
-      left: -14px;
-    }
-    
-    .timeline-year {
-      color: var(--primary);
-      font-weight: 700;
-      margin-bottom: 5px;
-    }
-    
-    .timeline-degree {
-      font-weight: 700;
-      margin-bottom: 10px;
-      color: var(--secondary);
-    }
-    
-    /* Contact section */
-    .contact-info {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-    
-    .contact-card {
-      background-color: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px var(--shadow);
-      flex: 1;
-      min-width: 300px;
-      margin: 0 15px 30px;
-      text-align: center;
-    }
-    
-    .contact-icon {
-      font-size: 2rem;
-      color: var(--accent);
-      margin-bottom: 20px;
-    }
-    
-    .contact-card h3 {
-      margin-bottom: 10px;
-      color: var(--secondary);
-    }
-    
-    /* Footer */
-    footer {
-      background-color: var(--dark);
-      color: white;
-      padding: 40px 0;
-      text-align: center;
-    }
-    
-    .social-links {
-      display: flex;
-      justify-content: center;
-      margin: 20px 0;
-    }
-    
-    .social-link {
-      display: inline-block;
-      width: 40px;
-      height: 40px;
-      background-color: #444;
-      color: white;
-      border-radius: 50%;
-      margin: 0 10px;
-      line-height: 40px;
-      transition: background-color 0.3s;
-    }
-    
-    .social-link:hover {
-      background-color: var(--accent);
-    }
-    
-    /* Responsive styles */
-    @media (max-width: 768px) {
-      .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      
-      .nav-links {
-        flex-direction: column;
-        width: 100%;
-        display: none;
-      }
-      
-      .nav-links.active {
-        display: flex;
-      }
-      
-      .nav-links li {
-        margin: 10px 0;
-      }
-      
-      .hamburger {
-        display: block;
-        position: absolute;
-        top: 20px;
-        right: 20px;
-      }
-      
-      .about-text, .about-image {
-        flex: 100%;
-        padding: 0;
-        margin-bottom: 40px;
-      }
-      
-      .timeline::after {
-        left: 31px;
-      }
-      
-      .timeline-item {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 0;
-      }
-      
-      .timeline-item:nth-child(even) {
-        left: 0;
-      }
-      
-      .timeline-item:nth-child(odd) .timeline-content::after,
-      .timeline-item:nth-child(even) .timeline-content::after {
-        left: -14px;
-      }
-    }
-  </style>
+  <title>Omar Sheik Mustafa</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- Header -->
@@ -447,8 +14,9 @@
         <div class="logo">Omar Sheik Mustafa</div>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
           <li><a href="#research">Research</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
           <li><a href="#education">Education</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -461,7 +29,7 @@
   <section class="hero">
     <div class="container">
       <h1>Omar Sheik Mustafa</h1>
-      <p>Machine Learning Engineer & AI Researcher</p>
+      <p>Machine Learning Engineer</p>
       <a href="#contact" class="btn">Get in Touch</a>
     </div>
   </section>
@@ -472,158 +40,320 @@
       <h2 class="section-title">About Me</h2>
       <div class="about-content">
         <div class="about-text">
-          <p>I'm an aspiring Machine Learning Engineer and Researcher with a deep love for machine learning and a fascination with understanding how algorithms work. To me, machine learning is a form of art—capturing the intricate ways we think and perceive the world in mathematical representations is truly beautiful and inspiring. My journey began during my undergraduate studies, where I discovered the true beauty of the art behind these algorithms.</p>
-          <p>Currently focused on deep learning applications in computer vision and natural language processing, I'm constantly expanding my knowledge through hands-on projects, research, and collaboration with the AI community.</p>
-          <p>My goal is to contribute to cutting-edge research while building practical AI systems that are ethical, interpretable, and beneficial to society.</p>
+          <p>
+            I'm an aspiring Machine Learning Engineer and Researcher with a deep love for machine learning 
+            and a fascination with understanding how these algorithms work. To me, machine learning is a 
+            form of art; capturing the ways we think and perceive the world and putting them into mathematical representations 
+            is truly beautiful and inspiring. My journey began during my undergraduate studies, 
+            where I discovered the true beauty of the art behind these algorithms.
+          </p>
+          <br>
+          <p>
+            Currently focused on deep learning applications in natural language processing and computer vision, 
+            I'm constantly expanding my knowledge through hands-on projects, research, and collaboration with the AI community.
+          </p>
+          <br>
+          <p>
+            My goal is to contribute to the field of AI research while building practical AI systems that 
+            are ethical, explainable, and beneficial to society.
+          </p>
           
           <div class="skills">
             <h3>Technical Skills</h3>
             <div class="skill-tags">
               <span class="skill-tag">Python</span>
-              <span class="skill-tag">TensorFlow</span>
               <span class="skill-tag">PyTorch</span>
+              <span class="skill-tag">LLMs</span>
+              <span class="skill-tag">RAG</span>
+              <span class="skill-tag">Natural Language Processing</span>
+              <span class="skill-tag">Hugging Face</span>
+              <span class="skill-tag">Transformers</span>
+              <span class="skill-tag">NumPy</span>
               <span class="skill-tag">Scikit-learn</span>
-              <span class="skill-tag">Computer Vision</span>
-              <span class="skill-tag">NLP</span>
+              <span class="skill-tag">Recommendation Systems</span>
               <span class="skill-tag">Deep Learning</span>
-              <span class="skill-tag">Data Analysis</span>
-              <span class="skill-tag">MLOps</span>
-              <span class="skill-tag">Docker</span>
-              <span class="skill-tag">Git</span>
-              <span class="skill-tag">SQL</span>
+              <span class="skill-tag">Computer Vision</span>
+              <span class="skill-tag">Data Science</span>
             </div>
           </div>
         </div>
         <div class="about-image">
-          <img src="/api/placeholder/400/400" alt="Omar Sheik Mustafa">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="section" style="background-color: #eef2f7;">
-    <div class="container">
-      <h2 class="section-title">Projects</h2>
-      <div class="projects-grid">
-        <!-- Project 1 -->
-        <div class="project-card">
-          <div class="project-image">
-            <img src="/api/placeholder/350/200" alt="Medical Image Classification">
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Medical Image Classification</h3>
-            <p>Developed a deep learning model to classify X-ray images for pneumonia detection with 94% accuracy, utilizing transfer learning with EfficientNet architecture.</p>
-            <div class="project-tags">
-              <span class="project-tag">Computer Vision</span>
-              <span class="project-tag">PyTorch</span>
-              <span class="project-tag">Transfer Learning</span>
-            </div>
-            <a href="#" class="btn">View Project</a>
-          </div>
-        </div>
-        
-        <!-- Project 2 -->
-        <div class="project-card">
-          <div class="project-image">
-            <img src="/api/placeholder/350/200" alt="Sentiment Analysis Tool">
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Sentiment Analysis Tool</h3>
-            <p>Built an NLP-based sentiment analysis tool that processes customer reviews and provides actionable insights for businesses, deployed as a web application.</p>
-            <div class="project-tags">
-              <span class="project-tag">NLP</span>
-              <span class="project-tag">BERT</span>
-              <span class="project-tag">Flask</span>
-              <span class="project-tag">JavaScript</span>
-            </div>
-            <a href="#" class="btn">View Project</a>
-          </div>
-        </div>
-        
-        <!-- Project 3 -->
-        <div class="project-card">
-          <div class="project-image">
-            <img src="/api/placeholder/350/200" alt="Time Series Forecasting">
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Time Series Forecasting</h3>
-            <p>Implemented a hybrid model combining LSTM networks and statistical methods for energy consumption prediction, reducing forecast error by 18% compared to baseline models.</p>
-            <div class="project-tags">
-              <span class="project-tag">Time Series</span>
-              <span class="project-tag">LSTM</span>
-              <span class="project-tag">TensorFlow</span>
-              <span class="project-tag">Data Visualization</span>
-            </div>
-            <a href="#" class="btn">View Project</a>
-          </div>
+          <img src="images/hero.jpg" alt="Omar Sheik Mustafa" width="350">
         </div>
       </div>
     </div>
   </section>
 
   <!-- Research Section -->
-  <section id="research" class="section">
+  <section id="research" class="section" style="background-color: #2a2b2c;">
     <div class="container">
       <h2 class="section-title">Research</h2>
       
       <!-- Research Item 1 -->
       <div class="research-item">
-        <h3 class="research-title">Exploring Attention Mechanisms in Transformer Models for Long Document Summarization</h3>
-        <p class="research-meta">Under review • Machine Learning Conference 2025</p>
-        <p>Proposed a modified attention mechanism that efficiently handles long documents by incorporating hierarchical structure, improving summarization quality on documents over 10,000 words with reduced computational requirements.</p>
+        <h3 class="research-title">Visualization for AI-driven Admissions process</h3>
+        <p class="research-meta">IEEE VIS Conference 2025 • Under review</p>
+        <p>
+          Co-authored a paper submitted to IEEE VIS 2025 that presents an AI-driven admissions analytics platform, 
+          combining NLP-based applicant profiling, interactive visual dashboards for insight delivery, and predictive models 
+          that estimate acceptance probability and recommend suitable programmes to enhance transparency and support 
+          data-informed decisions in university admissions.
+        </p>
       </div>
-      
+
       <!-- Research Item 2 -->
       <div class="research-item">
-        <h3 class="research-title">Interpretable Deep Learning: A Comparative Study of Feature Attribution Methods</h3>
-        <p class="research-meta">University Research Symposium • 2024</p>
-        <p>Conducted a comprehensive evaluation of interpretability methods (SHAP, Integrated Gradients, LIME) across multiple domains, providing a framework for selecting appropriate explanation techniques based on model type and application context.</p>
+        <h3 class="research-title">Aptitude-Based Admissions Part 2: Recommendation System</h3>
+        <p class="research-meta">NTU EEE Final Year Project</p>
+        <p>
+          Proposed and developed a weighted-hybrid recommendation system that fuses content-based filtering algorithms 
+          with collaborative filtering ones (Probability Matrix Factorisation) to match university applicants to the 
+          most relevant dergees, outperforming single-method baselines on HitRate and MRR.
+        </p>
+      </div>
+      <!-- Research Item 3 -->
+      <div class="research-item">
+        <h3 class="research-title">Dummy Data Generation and Data Augmentation using Machine Learning</h3>
+        <p class="research-meta">NTU Undergraduate Research Opportunities Programme 2023</p>
+        <p>
+          Conducted a comprehensive study on various techniques (GANs, NST) used to generate dummy data and augment data 
+          using machine learning, highlighting appriopriate techniques based on model architecture and application context.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- Education Section -->
-  <section id="education" class="section" style="background-color: #eef2f7;">
+  <!-- Experience Section -->
+  <section id="experience" class="section">
     <div class="container">
-      <h2 class="section-title">Education</h2>
-      
-      <div class="timeline">
-        <!-- Education Item 1 -->
-        <div class="timeline-item">
-          <div class="timeline-content">
-            <div class="timeline-year">2023 - Present</div>
-            <div class="timeline-degree">M.S. in Computer Science, AI Specialization</div>
-            <p>Stanford University</p>
-            <p>Research focus: Interpretable deep learning and generative models.</p>
+      <h2 class="section-title">Internship Experience</h2>
+      <div class="experience-grid">
+
+        <div class="experience-card">
+          <div class="experience-content">
+            <h3 class="experience-title">
+              Large Language Model Developer Intern
+            </h3>
+            <div class="experience-meta">
+              <span class="experience-company">Evooq</span>
+              <span class="experience-duration">January 2024 - April 2024</span>
+            </div>
+            <p class="experience-summary">
+              Aided in the development of Large Language Model (LLM) applications to streamline and improve the process 
+              of investment proposals.
+            </p>
+
+            <ul class="experience-points">
+              <li>
+                Collaborated with CTO and project managers to develop proof-of-concept involving LLMs using OpenAI SDK 
+                to generate trading strategies and rationalise investment proposals.
+              </li>
+              <li>
+                Used LangChain to implement Retrieval Augmented Generation (RAG) and improve LLM performance.
+              </li>
+              <li>
+                Architectured application using MariaDB and Python featuring automated portfolio management tools.
+              </li>
+            </ul>
+
+            <hr>
+
+            <div class="experience-tags">
+              <span class="experience-tag">Python</span>
+              <span class="experience-tag">LLMs</span>
+              <span class="experience-tag">LangChain</span>
+              <span class="experience-tag">RAG</span>
+              <span class="experience-tag">Project Management</span>
+            </div>
+          </div>
+          <div class="experience-image">
+            <img src="images/evooq.jpg" alt="Evooq" width="250px">
+          </div>
+        </div>
+
+        <div class="experience-card">
+          <div class="experience-content">
+            <h3 class="experience-title">
+              AI Deep Learning Software Developer Intern
+            </h3>
+            <div class="experience-meta">
+              <span class="experience-company">Panasonic R&D Centre Singapore</span>
+              <span class="experience-duration">May 2023 - December 2023</span>
+            </div>
+            <p class="experience-summary">
+              Corresponded closely with 3 senior machine learning R&D engineers to conduct innovative research on 
+              generative AI, focusing on image generation and LLMs, to improve company's electronic products.
+            </p>
+
+            <ul class="experience-points">
+              <li>
+                Researched diffusion models to help develop machine learning tool that generates thumbnail images for videos 
+                based on the video's content.
+              </li>
+              <li>
+                Assisted in developing movie summarisation tool that reduces movie length by up to 50%.
+              </li>
+              <li>
+                Annotated more than 1500 images in data annotation process for training of YOLO Object Detection model.
+              </li>
+            </ul>
+
+            <hr>
+
+            <div class="experience-tags">
+              <span class="experience-tag">Python</span>
+              <span class="experience-tag">LLMs</span>
+              <span class="experience-tag">Diffusion Models</span>
+              <span class="experience-tag">AI Research</span>
+              <span class="experience-tag">Hugging Face</span>
+            </div>
+          </div>
+
+          <div class="experience-image">
+            <img src="images/panasonic.jpg" alt="Panasonic" width="250px">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section" style="background-color:#2a2b2c;">
+    <div class="container" id="projects-container">
+      <h2 class="section-title">Recent Projects</h2>
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/recsys.png" alt="Recommendation System" height="200">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Recommendation System for University Admissions</h3>
+            <p>
+              Designed and constructed a recommendation system that recommends appriopriate schools in NTU 
+              to the user based on their interests, academic background, and co-curricular activities. Added a 
+              RAG LLM chatbot to tend to user queries.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">LLM</span>
+              <span class="project-tag">RAG</span>
+              <span class="project-tag">Natural Language Processing</span>
+              <span class="project-tag">PyTorch</span>
+              <span class="project-tag">BERT</span>
+              <span class="project-tag">Content-based filtering</span>
+              <span class="project-tag">Collaborative filtering</span>
+            </div>
+            <!-- <div class="project-button-container">
+              <a href="#" class="project-button">View Project</a>
+            </div> -->
           </div>
         </div>
         
-        <!-- Education Item 2 -->
-        <div class="timeline-item">
-          <div class="timeline-content">
-            <div class="timeline-year">2019 - 2023</div>
-            <div class="timeline-degree">B.S. in Data Science</div>
-            <p>University of California, Berkeley</p>
-            <p>GPA: 3.9/4.0. Senior thesis: "Transfer Learning Approaches for Low-Resource Classification Tasks"</p>
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/infoextract.png" alt="Information-Extraction Tool" height="200">
           </div>
+          <div class="project-content">
+            <h3 class="project-title">Information-Extraction Engine</h3>
+            <p>
+              Developed a BERT-based machine learning tool that extracts key information from lecture transcripts 
+              when given a user query. Experimented with various ways to implement this, but eventually ended with 
+              fine-tuning BERT variants on the SQuAD dataset and a synthetic dataset.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Natural Language Processing</span>
+              <span class="project-tag">PyTorch</span>
+              <span class="project-tag">BERT</span>
+              <span class="project-tag">Fine-tuning</span>
+              <span class="project-tag">Hyperparameter Tuning</span>
+            </div>
+            <!-- <div class="project-button-container">
+              <a href="#" class="project-button">View Project</a>
+            </div> -->
+          </div>
+          
         </div>
         
-        <!-- Education Item 3 -->
-        <div class="timeline-item">
-          <div class="timeline-content">
-            <div class="timeline-year">2024</div>
-            <div class="timeline-degree">Deep Learning Specialization</div>
-            <p>Coursera (Andrew Ng)</p>
-            <p>Completed 5-course specialization in neural networks, hyperparameter tuning, structuring ML projects, CNNs, and sequence models.</p>
+        <!-- Project 3 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/isd1.jpg" alt="Facial Recognition System">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Facial Recognition System</h3>
+            <p>
+              Built 2 facial recognition systems, with one using traditional machine learning methods like 
+              Principal Component Analysis and the other using deep learning techniques like Multi-task Cascaded 
+              Convolutional Networks.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Computer Vision</span>
+              <span class="project-tag">OpenCV</span>
+              <span class="project-tag">Face Detection</span>
+              <span class="project-tag">Face Recognition </span>
+            </div>
+            <!-- <div class="project-button-container">
+              <a href="https://github.com/omar-ntu/face-recognition" class="project-button">View Project</a>
+            </div> -->
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Education Section – new horizontal timeline -->
+  <section id="education" class="section">
+    <div>
+      <h2 class="section-title">Education</h2>
+    </div>
+    <div class="container">
+      <div id="education-container">
+        <div class="education-timeline">
+          <span class="timeline-line"></span>
+  
+          <!-- Item 1 – left column, content below the line -->
+          <div class="education-item">
+            <span class="education-dot"></span>
+            <span class="education-year">2007 - 2018</span>
+            <div class="education-content">
+              <h3 class="education-degree">Early Education</h3>
+              <p>Tampines Primary School</p>
+              <p>Dunman Secondary School</p>
+              <p>Innova Junior College</p>
+            </div>
+          </div>
+  
+          <!-- Item 2 – centre column, content above the line -->
+          <div class="education-item">
+            <span class="education-dot"></span>
+            <span class="education-year">2021 - 2025</span>
+            <div class="education-content">
+              <h3 class="education-degree">Bachelors (Hons) in Electrical & Electronic Engineering</h3>
+              <p>Nanyang Technological University</p>
+              <p>Machine Learning Specialisation</p>
+            </div>
+          </div>
+  
+          <!-- Item 3 – right column, content below the line -->
+          <div class="education-item">
+            <span class="education-dot"></span>
+            <span class="education-year">Future</span>
+            <div class="education-content">
+              <h3 class="education-degree">Masters/PhD?</h3>
+              <p>Artificial Intelligence / Machine Learning</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   <!-- Contact Section -->
-  <section id="contact" class="section">
+  <section id="contact" class="section" style="background-color:#2a2b2c;">
     <div class="container">
       <h2 class="section-title">Get In Touch</h2>
       
@@ -632,14 +362,14 @@
         <div class="contact-card">
           <div class="contact-icon">✉️</div>
           <h3>Email</h3>
-          <p>alex.chen@example.com</p>
+          <p>omarsheikmustafa@gmail.com</p>
         </div>
         
         <!-- Location -->
         <div class="contact-card">
           <div class="contact-icon">📍</div>
           <h3>Location</h3>
-          <p>San Francisco, CA</p>
+          <p>Singapore</p>
         </div>
         
         <!-- Availability -->
@@ -656,10 +386,12 @@
   <footer>
     <div class="container">
       <div class="social-links">
-        <a href="#" class="social-link">GH</a>
-        <a href="#" class="social-link">LI</a>
-        <a href="#" class="social-link">TW</a>
-        <a href="#" class="social-link">KG</a>
+        <a href="https://github.com/omar-ntu" target="_blank" class="social-link" rel="noopener noreferrer">
+          <img src="images/github.png" alt="github" class="social-link-avatar">
+        </a>
+        <a href="https://www.linkedin.com/in/omar-sheik-mustafa-7bb816259" target="_blank" class="social-link" rel="noopener noreferrer">
+          <img src="images/linkedin.png" alt="linkedin" class="social-link-avatar">
+        </a>
       </div>
       <p>&copy; 2025 Omar Sheik Mustafa. All rights reserved.</p>
     </div>
