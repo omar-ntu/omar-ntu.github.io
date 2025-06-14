@@ -630,6 +630,22 @@ footer {
 }
 
 @media (max-width: 768px) {
+    /* Fix the about section height issue on mobile */
+    .about {
+        height: auto; /* Remove fixed height */
+        min-height: 100vh; /* Ensure minimum height but allow expansion */
+        padding: 100px 0 80px; /* Add top padding for fixed header */
+    }
+    
+    .about-container {
+        align-content: flex-start; /* Change from center to flex-start */
+        padding-top: 40px; /* Add some top padding */
+    }
+    
+    .about-content {
+        margin-top: 0; /* Remove the 5vh margin */
+    }
+    
     .navbar {
         flex-direction: column;
         align-items: flex-start;
@@ -711,6 +727,19 @@ footer {
 }
 
 @media (max-width: 576px) {
+    /* Further mobile optimizations */
+    .about {
+        padding: 120px 0 60px; /* Increase top padding for smaller screens */
+    }
+    
+    .about h1 {
+        font-size: 2.5rem; /* Slightly smaller on very small screens */
+    }
+    
+    .about h2 {
+        font-size: 1.4rem; /* Slightly smaller on very small screens */
+    }
+    
     .hero {
         padding: 140px 0 80px;
     }
